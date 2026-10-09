@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+:root {
+  --sans: var(--f-inter), ui-sans-serif, system-ui, sans-serif;
+  --serif: var(--f-serif), Georgia, serif;
+  --mono-f: var(--f-mono), ui-monospace, monospace;
+  --paper: #eceef0; /* page background (warm off-white) */
+  --card: #ffffff;
+  --ink: #0c1116; /* text, buttons, active states */
+  --ink-2: #2f363d;
+  --mute: #6b747d; /* secondary text (large / decorative use) */
+  --mute-text: #4f585f; /* secondary text at small sizes, passes AA on paper */
+  --faint: #9aa3ab;
+  --line: rgba(12, 17, 22, 0.1);
+  --soft: #dde1e5;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1); /* used for every transition */
+  --gutter: clamp(18px, 4vw, 64px);
+  --pad-y: clamp(96px, 14vh, 160px);
+}
+
+@layer base {
+  html {
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    background-color: var(--paper);
+    background-image: radial-gradient(rgba(12, 17, 22, 0.085) 1px, transparent 1.2px);
+    background-size: 22px 22px;
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.55;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  img,
+  video,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+  ul,
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  ::selection {
+    background: var(--ink);
+    color: var(--paper);
+  }
+}
+
+@layer components {
+  .wrap {
+    width: 100%;
+    max-width: calc(1320px + var(--gutter) * 2);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+  .section {
+    padding-block: var(--pad-y);
+    position: relative;
+  }
+  .mono {
+    font-family: var(--mono-f);
+  }
+  .tag {
+    font-family: var(--mono-f);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mute-text);
+    margin-bottom: 20px;
+  }
+  .h2 {
+    font-weight: 700;
+    font-size: clamp(40px, 6.2vw, 92px);
+    letter-spacing: -0.045em;
+    line-height: 1;
+  }
+  .h2 em,
+  .accent {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--mute);
+    letter-spacing: -0.02em;
+  }
+  .card {
+    background: var(--card);
+    border-radius: 26px;
+    box-shadow: inset 0 0 0 1px var(--line);
+    transition: box-shadow 0.6s var(--ease), transform 0.6s var(--ease);
+  }
+  .card.is-active {
+    box-shadow: inset 0 0 0 1px var(--line), 0 30px 80px -30px rgba(12, 17, 22, 0.25);
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    height: 48px;
+    padding: 0 24px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    transition: background 0.4s var(--ease), color 0.4s var(--ease), transform 0.4s var(--ease),
+      box-shadow 0.4s var(--ease);
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  .btn-primary {
+    background: var(--ink);
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background: var(--ink-2);
+    box-shadow: 0 14px 30px -14px rgba(12, 17, 22, 0.6);
+  }
+  .btn-ghost {
+    box-shadow: inset 0 0 0 1px rgba(12, 17, 22, 0.28);
+    background: transparent;
+  }
+  .btn-ghost:hover {
+    background: var(--ink);
+    color: #fff;
+  }
+
+  /* reveal-on-scroll (see RevealObserver in App.tsx) */
+  .rv {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+    transition-delay: calc(var(--i, 0) * 80ms);
+  }
+  .rv.is-in {
+    opacity: 1;
+    transform: none;
+  }
+  .rv-mask {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.16em; /* keeps descenders (g, y, p) from being clipped by the mask */
+    margin-bottom: -0.16em;
+  }
+  .rv-mask > * {
+    display: block;
+    transform: translateY(105%);
+    transition: transform 1s var(--ease);
+    transition-delay: calc(var(--i, 0) * 90ms);
+  }
+  .rv-mask.is-in > * {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+  .rv,
+  .rv-mask > * {
+    opacity: 1;
+    transform: none;
+  }
+}
