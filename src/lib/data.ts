@@ -384,7 +384,7 @@ export const PROJECTS: Project[] = [
     title: "Azure Incident API",
     kicker: "FastAPI · Azure App Service · Application Insights · Azure DevOps",
     description:
-      "Built a deliberately breakable FastAPI service to practise production observability on Azure: every endpoint produces a different signal (healthy, slow, client error, server error, failed dependency), investigated in Application Insights with KQL and shipped through an Azure DevOps pipeline.",
+      "Built a deliberately breakable FastAPI service to practice production observability on Azure: every endpoint produces a different signal (healthy, slow, client error, server error, failed dependency), investigated in Application Insights with KQL and shipped through an Azure DevOps pipeline.",
     features: [
       "Seven endpoints, each a distinct telemetry signal",
       "Azure Monitor auto-instrumentation",
@@ -439,7 +439,7 @@ export const PROJECTS: Project[] = [
       "Kafka buffers events if the database is down",
       "One-command Docker Compose setup",
     ],
-    tech: ["Kafka", "Airflow", "PostgreSQL", "Python", "Docker", "Flask"],
+    tech: ["Kafka", "Airflow", "PostgreSQL", "Python", "Docker"],
     resumeLine: "Built a Kafka, Airflow and PostgreSQL log pipeline; a composite index cut dashboard latency by 35%",
     problem: "Log data arrives fast and in bursts, and a slow or failing database must not lose events.",
     approach: [
@@ -537,7 +537,7 @@ export const EDUCATION: TimelineItem[] = [
 export const EXPERIENCE: TimelineItem[] = [
   {
     kind: "experience",
-    year: "May 2020 – Jul 2020",
+    year: "Apr 2021 – Jun 2021",
     title: "Software Developer Intern",
     place: "Unschool",
     where: "India (Remote)",
@@ -547,7 +547,7 @@ export const EXPERIENCE: TimelineItem[] = [
   },
   {
     kind: "experience",
-    year: "Jun 2021 – Nov 2021",
+    year: "Jun 2021 – Aug 2021",
     title: "Software Developer Intern",
     place: "Supa Ventures Pvt Ltd",
     where: "India (Remote)",
@@ -630,7 +630,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     label: "Publication",
     value: 2023,
     plain: true,
-    caption: "IEEE ICCCNT 2023",
+    caption: "IEEE ICCCNT, IIT Delhi",
     detail: "Smart Crop Management Dashboard",
     icon: "paper",
   },

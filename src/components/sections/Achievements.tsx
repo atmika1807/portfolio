@@ -174,9 +174,7 @@ export default function Achievements() {
           {ACHIEVEMENTS.map((a, i) => (
             <Card key={a.label} a={a} i={i} near={near === i} />
           ))}
-          <li className="ach-end" aria-hidden="true">
-            more to come →
-          </li>
+          <li className="ach-end" aria-hidden="true" />
         </ul>
       </div>
     </section>

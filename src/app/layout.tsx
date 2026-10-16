@@ -21,11 +21,11 @@ const mono = localFont({
   weight: "100 800",
 });
 
-const title = `${PROFILE.name} · ${PROFILE.role}, ${PROFILE.roleAccent}`;
+const title = `${PROFILE.name} · ${PROFILE.role}, ${PROFILE.roleAccent.replace("&", "and")}`;
 const description = `${PROFILE.name} is a ${PROFILE.role.toLowerCase()} working across data and AI: production AI platforms, data pipelines, RAG systems and MLOps.`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://atmika-dev.vercel.app"),
+  metadataBase: new URL("https://atmika-parey.vercel.app"),
   title,
   description,
   openGraph: {

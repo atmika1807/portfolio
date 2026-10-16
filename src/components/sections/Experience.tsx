@@ -93,9 +93,6 @@ export default function Experience() {
               </div>
             </li>
           ))}
-          <li className="next rv" style={{ listStyle: "none" }}>
-            Next — <em>your roadmap?</em>
-          </li>
           </ol>
         </div>
       </div>
