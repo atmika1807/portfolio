@@ -223,7 +223,7 @@ export const PROJECTS: Project[] = [
     ],
     kicker: "LangGraph · Multi-Agent · FastAPI · PostgreSQL",
     description:
-      "Built a multi-agent job-search system on LangGraph: separate agents for matching, outreach and tracking share one state graph with checkpoints. The Gmail outreach module is live, working from 925 HR and founder contacts across 361 Indian product companies.",
+      "Built a multi-agent job-search system on LangGraph: separate agents for matching, outreach and tracking share one state graph with checkpoints. The Gmail outreach module is live, working from 925 HR and founder contacts across 361 Indian product companies. Each run discovers about 80–110 real jobs through 11 JSearch API calls, within the free tier of 200 a month.",
     features: [
       "LangGraph state graph with checkpoints",
       "Matcher agent: 0–100 fit score with reasons",
