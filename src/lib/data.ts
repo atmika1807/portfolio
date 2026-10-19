@@ -550,7 +550,7 @@ export const EXPERIENCE: TimelineItem[] = [
     kind: "experience",
     year: "Jun 2021 – Aug 2021",
     title: "Software Developer Intern",
-    place: "Supa Ventures Pvt Ltd",
+    place: "Supa Ventures Pvt Ltd (Blitz Jobs)",
     where: "India (Remote)",
     detail: [
       "Built event-driven Kafka + Airflow pipelines processing 50K+ events/day with retry logic and fault-tolerant design for high-volume reliability, cutting failed jobs by 90% while owning the work across the full SDLC.",
@@ -574,7 +574,7 @@ export const EXPERIENCE: TimelineItem[] = [
     place: "Community Dreams Foundation",
     where: "USA (Remote)",
     detail: [
-      "Owned and built a new AI platform end-to-end – FastAPI backend, LLM orchestration, RAG pipelines, SSE streaming – taking it from design through to production deployment.",
+      "Owned and built a new AI platform end-to-end – FastAPI backend, Qdrant RAG pipelines, LLM orchestration, SSE streaming – improving information retrieval efficiency by 60% for community program queries, from design through production.",
       "Automated manual, CLI-driven data ingestion and deployment workflows into standardized CI/CD pipelines, eliminating a release bottleneck and cutting operational overhead.",
       "Built evaluation, drift detection, and observability into the production service, reaching 90% accuracy on grant and outreach content (right context, right audience, as scored by an LLM judge) while tracking latency and cost.",
       "Replaced hours of manual grant and outreach message writing with an AI agent, then added an MLflow evaluation pipeline with an LLM as judge and set criteria, cutting processing time by 60%.",
