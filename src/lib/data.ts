@@ -231,6 +231,7 @@ export const PROJECTS: Project[] = [
       "Max 2 contacts per company",
       "FastAPI dashboard endpoints",
       "PostgreSQL and optional MLflow logging",
+      "JSearch job discovery: 11 API calls per run, free tier of 200 a month",
     ],
     tech: ["LangGraph", "Multi-Agent Systems", "LangChain", "FastAPI", "PostgreSQL", "MLflow"],
     resumeLine: "Built a LangGraph job-search agent: finding relevant roles went from hours to 5 minutes, with outreach to 925 HR contacts",
@@ -241,7 +242,7 @@ export const PROJECTS: Project[] = [
       "Built a Gmail outreach module that matches companies to HR contacts, caps two per company and drafts personal emails.",
       "Stored jobs, contacts and applications in PostgreSQL and exposed them through FastAPI.",
     ],
-    result: ["Finding relevant roles went from hours to about 5 minutes, with score and location on each match", "925 HR and founder contacts across 361 Indian product companies ready for outreach", "Every match comes with a 0–100 score, reasons and missing skills"],
+    result: ["Finding relevant roles went from hours to about 5 minutes, with score and location on each match", "About 80–110 real jobs discovered per run, using 11 JSearch API calls", "Runs inside the JSearch free tier of 200 API calls a month", "925 HR and founder contacts across 361 Indian product companies ready for outreach", "Every match comes with a 0–100 score, reasons and missing skills"],
     flow: ["Job postings", "Matcher agent", "Outreach agent", "Gmail drafts"],
     support: ["LangGraph state + checkpoints", "PostgreSQL", "FastAPI dashboard", "MLflow"],
     replay: {
